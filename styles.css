@@ -1,10 +1,12 @@
 * {
     margin: auto;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
 html {
     scroll-behavior: smooth;
+    
 }
 
 .nav-maxed-page {
@@ -15,6 +17,7 @@ html {
     height: 60px;
     background: rgba(0, 0, 0, 0.199);
     position: fixed;
+
 }
 
 body::-webkit-scrollbar {
@@ -44,24 +47,21 @@ body::-webkit-scrollbar-thumb:active {
 }
 
 .profile-pic-container {
- width: 600px;
- height: 450px;
-
+ /* width: 600px;
+ height: 450px; */
 }
 
 .profile-pic {
     border-radius: 15px;
     height: 140px; 
-    width: auto;
-    text-align: center;
-    float: left; 
-    margin: 15px 30px 5px 5px;
+    /* width: auto; */
+    /* text-align: justify; */
+    /* float: left;  */
+    /* margin: 15px 30px 5px 5px; */
     border: solid 1px beige;
+    margin-bottom: 2%;
+    /* margin-top: 4%; */
 }
-
-/* .profile-pic:hover {
-    
-} */
 
 .intro {
     text-align: center;
@@ -106,10 +106,9 @@ body::-webkit-scrollbar-thumb:active {
     font-weight: 500;
 }
 
-.description, .description-pt2, .description-pt3 {
-    color: rgba(0, 0, 0, 0.445);
-    font-family: 'Lato', sans-serif;
-}
+#home-container, #about, #projects, #skills, #contact {
+    width: 100%;
+} 
 
 #about, #projects {
     text-align: center;
@@ -127,15 +126,30 @@ body::-webkit-scrollbar-thumb:active {
 
 .about-info {
     background-color: rgba(0, 0, 0, 0.199);
-    padding: 40px;
-    margin: 40px 120px;
     border-radius: 10px;
-    color: beige;
-    text-align: justify;
+     color: beige;
+     /* text-align: justify; */
+    padding: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    /* margin: 10% 10%; */
+    /* font-size: 20px; */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    /* row-gap: 15px;
+    column-gap: 15px; */
+    /* text-align: center; */
+    height: 60%;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    
 }
 
 .about-title {
-    padding-bottom: 40px;
+    /* padding-bottom: 40px; */
 }
 
 #projects {
@@ -143,25 +157,54 @@ body::-webkit-scrollbar-thumb:active {
 }
 
 .all-projects-container {
-    padding-top: 100px;
-    display: flex;
-    margin-right: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    row-gap: 80px;
+
+    font-size: 14px;
+    margin-left: 105px;
+    margin-right: 105px;
+    margin-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 60vh;
+    border: 1px solid #ccc;
+    font: 16px/26px;
+    overflow: auto;
+    text-align: center;
+
 }
 
-.proj-1-container, .proj-2-container, .proj-3-container {
+.all-projects-container::-webkit-scrollbar {
+        width: 10px;
+        height: 12px;
+    }
+        
+    .all-projects-container::-webkit-scrollbar-thumb {
+        background: rgb(243, 240, 240);  
+        border-radius: 10px;
+    }     
+/* put inside of scrollable box */
+
+.proj-1-container, .proj-2-container, .proj-3-container, .proj-4-container {
     position: relative;
-    width: 50%;
-    max-width: 300px;
+    /* width: 50%; */
+    /* max-width: 300px;
+    max-height: 80px;     */
 }
 
-.proj-1-img, .proj-2-img, .proj-3-img {
+    
+
+
+.proj-1-img, .proj-2-img, .proj-3-img, .proj-4-img {
     display: block;
     border-top-left-radius: 5px;
     border-top-right-radius: 60px;
 }
 
 .proj-1-img {
-    filter: grayscale(100%);
+    filter: grayscale(95%);
 }
 
 .proj-2-img {
@@ -169,6 +212,10 @@ body::-webkit-scrollbar-thumb:active {
 }
 
 .proj-3-img {
+    filter: grayscale(60%);
+}
+
+.proj-4-img {
     filter: grayscale(50%);
 }
 
@@ -210,13 +257,18 @@ body::-webkit-scrollbar-thumb:active {
 }
 
 .skills-container {
-    display: flex;
     background-color: rgba(0, 0, 0, 0.199);
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 10%;
+    margin-right: 10%;
     border-radius: 10px;
     padding-top: 40px;
     padding-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 15px;
+    column-gap: 15px;
+    text-align: center;
 }
 
 .html-icon, .js-icon, .css-icon, .react-icon, .node-icon {
@@ -227,6 +279,10 @@ body::-webkit-scrollbar-thumb:active {
     background-image: url("https://images.unsplash.com/photo-1509023464722-18d996393ca8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZGFyayUyMGdyZXl8ZW58MHwwfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.projects-title {
+    margin-bottom: 4%;
 }
 
 .skills-title {
@@ -252,15 +308,18 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     padding: 10px 0px;
-    width: auto;
+    width: 100%;
+    /* width: auto; */
     font-size: 25px;
     height: 100vh;
+    
 }
 
 .footer-links {
     display: flex;
     flex-direction: row;
-    font-size: 50px;
+    font-size: 8vw;
+    text-align: center;
 }
 
 .github-icon, .linkedin-icon, .download-resume-icon, .email-icon {
@@ -291,21 +350,22 @@ footer {
     animation-delay: 0.5s;
 }
 
-.description {
+.description, .description-pt2, .description-pt3 {
+    color: rgba(0, 0, 0, 0.445);
+    font-family: 'Lato', sans-serif;
     opacity: 0; 
     animation: fadeInUp 1s ease-in-out 0s forwards;
+}
+
+.description {
     animation-delay: 3s;
 }
 
 .description-pt2 {
-    opacity: 0; 
-    animation: fadeInUp 1s ease-in-out 0s forwards;
     animation-delay: 4.5s;
 }
 
 .description-pt3 {
-    opacity: 0; 
-    animation: fadeInUp 1s ease-in-out 0s forwards;
     animation-delay: 6s;
 }
 
@@ -317,13 +377,23 @@ a:link {
     text-decoration: none;
 }
 
-a:hover {
+a:hover, .original-zen-garden-link, .james-portfolio-link {
     color: beige;
+}
+
+.original-zen-garden-link, .james-portfolio-link {
+    background-color: rgba(0, 0, 0, 0.199);
+    border: 1px solid beige;
+}
+
+.original-zen-garden-link:hover, .james-portfolio-link:hover {
+    color: rgb(223, 203, 93);
 }
 
 .nav-min-page, .toggle-menu, .min-home, .min-about, .min-projects, .min-skills, .min-contact  {
     display: none;
 }
+
 
 /* media queries */
 
@@ -338,18 +408,9 @@ $phone: 480px; */
         margin-right: 50px;
     }
 
-    .proj-1-img, .proj-2-img, .proj-3-img {
+    .proj-1-img, .proj-2-img, .proj-3-img, .proj-4-img, .overlay-container, .overlay-container:after {
         width: 230px;
         height: 230px;
-    }
-
-    .proj-1-container, .proj-2-container, .proj-3-container {
-        width: 150px;
-        max-width: 300px;
-    }
-
-    .projects-container {
-        padding-top: 100px;
     }
 
     .overlay {
@@ -359,26 +420,48 @@ $phone: 480px; */
 
     .overlay-container {
         position: relative;
-        width: 230px;
-        height: 230px;
+        font-size: 12.5px;
     }
 
-    .overlay-container:after {
-        width: 230px; 
-        height: 230px;
+    .projects-container {
+        padding-top: 100px;
     }
+
+    .link-container {
+        padding-top: 60px;
+    }
+
+}
+
+@media only screen and (max-width: 1287px) {
+    .about-info {
+        font-size: 15px;
+    } 
 }
 
 @media (max-width: 1112px){
+
     .about-info {
-        font-size: 15px;
-        margin-left: 40px;
-        margin-right: 40px;
+        border: 1px solid #ccc;
+        font: 16px/26px;
+        overflow: auto;
+        text-align: center;
+        margin-top: 5%;
     }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 12px;
+    }
+        
+    ::-webkit-scrollbar-thumb {
+        background: rgb(243, 240, 240);  
+        border-radius: 10px;
+    }  
 }
 
 @media (max-width: 880px) {
-    .proj-1-img, .proj-2-img, .proj-3-img {
+    .proj-1-img, .proj-2-img, .proj-3-img, .proj-4-img {
         width: 200px;
         height: 180px;
     }
@@ -404,11 +487,11 @@ $phone: 480px; */
 }
 
 @media (max-width: 830px){
-    .about-info {
+    /* .about-info {
         font-size: 14px;
         margin-left: 10px;
         margin-right: 10px; 
-    }
+    } */
 }
 
 @media (max-width: 700px) {
@@ -432,7 +515,7 @@ $phone: 480px; */
         font-size: 16px;
     } 
 
-    .proj-1-img, .proj-2-img, .proj-3-img {
+    .proj-1-img, .proj-2-img, .proj-3-img, .proj-4-img {
         width: 190px;
         height: 180px;
     }
@@ -528,11 +611,12 @@ $phone: 480px; */
         height: 160px;
         width: 160px;
         margin-left: 15px;
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .overlay-container:after {
-            width: 160px; height: 160px;
+            width: 160px; 
+            height: 160px;
         }
 
     .overlay {
@@ -541,7 +625,7 @@ $phone: 480px; */
         font-size: 16px;
     } 
 
-    .proj-1-img, .proj-2-img, .proj-3-img {
+    .proj-1-img, .proj-2-img, .proj-3-img, .proj-4-img {
         width: 160px;
         height: 160px;
     
@@ -549,25 +633,25 @@ $phone: 480px; */
 }
 
 @media (max-width: 670px){
-    .about-info {
+    /* .about-info {
         font-size: 13px;
         margin-left: 9px;
         margin-right: 9px;
-    }
+    } */
 }
 
 /* for scrolling box in about section */
 @media (max-width: 600px){
-    .about-info {
+    /* .about-info {
         font-size: 14px;
         margin-left: 45px;
         height: 300px;
-        width: 380px;
-        border: 1px solid #ccc;
+        /* width: 380px; */
+        /* border: 1px solid #ccc;
         font: 16px/26px;
         overflow: auto;
         text-align: center;
-    }
+    } */
 
     ::-webkit-scrollbar {
         width: 10px;
@@ -587,29 +671,40 @@ $phone: 480px; */
     }
 }
 
-/* @media only screen and (max-width: 480px) {
-    .header-container {
-        height: 100vh;
-        
-    }
-
-    .intro, .about-info, .projects, .skills {
-        font-size: 4vw;
-    
+@media only screen and (max-width: 540px) {
+    .header-container, #home-container, #about, #projects, #skills, #contact {
+        /* height: 100vh; */
+        /* width: 115%; */
+        max-width: 100%;
     }
 
     .name {
         margin-top: -50px;
+        font-size: 40px;
     }
    
-    #home-container, #about {
-
+    .description, .description-pt2, .description-pt3 {
+        font-size: 20px;
     }
+
     .about-info {
-        margin-left: 75px;
-        width: 200px;
-        height: 200px;
+        width: 92%;
     }
 
+    .all-projects-container {
+        margin-left: 5%;
+        width: 90%;
+        height: 65%;
+    }
+
+    .projects-title {
+        padding-bottom: 15px;
+    }
     
-} */
+}
+
+@media only screen and (max-width: 415px) {
+    .footer-links {
+        margin-right: 15%;
+    }
+} 
