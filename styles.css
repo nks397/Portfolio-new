@@ -8,7 +8,6 @@ html {
     scroll-behavior: smooth;
     
 }
-
 .nav-maxed-page {
     display: flex;
     top: 0;
@@ -194,9 +193,6 @@ body::-webkit-scrollbar-thumb:active {
     max-height: 80px;     */
 }
 
-    
-
-
 .proj-1-img, .proj-2-img, .proj-3-img, .proj-4-img {
     display: block;
     border-top-left-radius: 5px;
@@ -348,9 +344,10 @@ footer {
     opacity: 0; 
     animation: fadeInUp 1s ease-in-out 0s forwards;
     animation-delay: 0.5s;
+    padding-bottom: 40px;
 }
 
-.description, .description-pt2, .description-pt3 {
+.description, .description-pt2, .description-pt3, .description-pt4 {
     color: rgba(0, 0, 0, 0.445);
     font-family: 'Lato', sans-serif;
     opacity: 0; 
@@ -367,6 +364,28 @@ footer {
 
 .description-pt3 {
     animation-delay: 6s;
+}
+
+.description-pt4 {
+    animation-delay: 7.5s;
+    padding-top: 50px;
+}
+
+.cta-contact {
+    border: solid 2px beige;
+    background-color: rgba(0, 0, 0, 0.199);
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.cta-contact:hover {
+    background-color: rgb(223, 203, 93, 1); 
+}
+
+.cta-contact-container {
+    padding-top: 50px;
+    text-align: center;
+    font-size: 30px;
+    
 }
 
 a{
@@ -680,10 +699,10 @@ $phone: 480px; */
 
     .name {
         margin-top: -50px;
-        font-size: 40px;
+        font-size: 30px;
     }
    
-    .description, .description-pt2, .description-pt3 {
+    .description, .description-pt2, .description-pt3, .description-pt4 {
         font-size: 20px;
     }
 
