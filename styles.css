@@ -322,8 +322,12 @@ footer {
     margin-left: 50px;
 }
 
-.fa-linkedin:before, .fa-github-square:before, .fa-file:before, .fa-envelope:before {
+.fa-linkedin, .fa-github-square, .fa-file, .fa-envelope {
     color: beige;
+}
+
+.fa-linkedin:hover, .fa-github-square:hover, .fa-file:hover, .fa-envelope:hover {
+    color: rgb(235, 217, 115);
 }
 
 @keyframes fadeInUp {
