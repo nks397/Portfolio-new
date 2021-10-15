@@ -282,7 +282,7 @@ body::-webkit-scrollbar-thumb:active {
 }
 
 .skills-title {
-    padding-bottom: 50px;
+    padding-bottom: 4vh;
 }
 
 .contact-title, .about-title, .skills-title, .projects-title {
