@@ -64,7 +64,7 @@ body::-webkit-scrollbar-thumb:active {
 
 .intro {
     text-align: center;
-    padding-top: 250px;
+    padding-top: 26vh;
     color: rgba(0, 0, 0, 0.856);
     font-size: 30px;
 }
@@ -375,6 +375,7 @@ footer {
     border: solid 2px beige;
     background-color: rgba(0, 0, 0, 0.199);
     padding-left: 15px;
+    font-size: 3vh;
     padding-right: 15px;
 }
 .cta-contact:hover {
@@ -382,10 +383,9 @@ footer {
 }
 
 .cta-contact-container {
-    padding-top: 50px;
+    padding-top: 5vh;
     text-align: center;
-    font-size: 30px;
-    
+    display: flex;
 }
 
 a{
