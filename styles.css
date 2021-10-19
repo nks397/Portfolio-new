@@ -281,12 +281,9 @@ body::-webkit-scrollbar-thumb:active {
     margin-bottom: 4%;
 }
 
-.skills-title {
-    padding-bottom: 4vh;
-}
-
 .contact-title, .about-title, .skills-title, .projects-title {
-    padding-top: 100px;
+    padding-top: 70px;
+    /* padding-bottom: 2vh; */
     text-align: center;
     font-size: 35px;
     color: rgba(0, 0, 0, 0.856);
