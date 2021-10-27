@@ -45,21 +45,11 @@ body::-webkit-scrollbar-thumb:active {
     height: 100vh;
 }
 
-.profile-pic-container {
- /* width: 600px;
- height: 450px; */
-}
-
 .profile-pic {
     border-radius: 15px;
-    height: 140px; 
-    /* width: auto; */
-    /* text-align: justify; */
-    /* float: left;  */
-    /* margin: 15px 30px 5px 5px; */
+    height: 140px;
     border: solid 1px beige;
     margin-bottom: 2%;
-    /* margin-top: 4%; */
 }
 
 .intro {
@@ -180,10 +170,11 @@ body::-webkit-scrollbar-thumb:active {
         height: 12px;
     }
         
-    .all-projects-container::-webkit-scrollbar-thumb {
-        background: rgb(243, 240, 240);  
-        border-radius: 10px;
-    }     
+.all-projects-container::-webkit-scrollbar-thumb {
+    background: rgb(243, 240, 240);  
+    border-radius: 10px;
+}   
+    
 /* put inside of scrollable box */
 
 .proj-1-container, .proj-2-container, .proj-3-container, .proj-4-container {
@@ -302,7 +293,6 @@ footer {
     align-items: center;
     padding: 10px 0px;
     width: 100%;
-    /* width: auto; */
     font-size: 25px;
     height: 100vh;
     
@@ -381,12 +371,6 @@ footer {
 }
 .cta-contact:hover {
     background-color: rgb(223, 203, 93, 1); 
-}
-
-.cta-contact-container {
-    padding-top: 5vh;
-    text-align: center;
-    display: flex;
 }
 
 a{
@@ -652,27 +636,16 @@ $phone: 480px; */
     }
 }
 
-@media (max-width: 670px){
+/* @media (max-width: 670px){
     /* .about-info {
         font-size: 13px;
         margin-left: 9px;
         margin-right: 9px;
     } */
-}
+/* } */
 
 /* for scrolling box in about section */
 @media (max-width: 600px){
-    /* .about-info {
-        font-size: 14px;
-        margin-left: 45px;
-        height: 300px;
-        /* width: 380px; */
-        /* border: 1px solid #ccc;
-        font: 16px/26px;
-        overflow: auto;
-        text-align: center;
-    } */
-
     ::-webkit-scrollbar {
         width: 10px;
         height: 12px;
