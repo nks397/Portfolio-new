@@ -179,9 +179,6 @@ body::-webkit-scrollbar-thumb:active {
 
 .proj-1-container, .proj-2-container, .proj-3-container, .proj-4-container {
     position: relative;
-    /* width: 50%; */
-    /* max-width: 300px;
-    max-height: 80px;     */
 }
 
 .proj-1-img, .proj-2-img, .proj-3-img, .proj-4-img {
@@ -280,18 +277,105 @@ body::-webkit-scrollbar-thumb:active {
     color: rgba(0, 0, 0, 0.856);
 }
 
+.contact-subtitle {
+    font-size: 15px;
+    text-align: center;
+    margin: 15px;
+    width: 40vw;
+}
+
+#contact-form {
+    display: flex; 
+    flex-direction: column;
+    margin: 15px;
+
+}
+
+input, textarea, button {
+    width: 50vw;
+    margin-top: 10px;
+    border-radius: 2px;
+
+}
+
+::placeholder {
+    color: rgb(223, 203, 93);
+}
+
+input, textarea {
+    background-color: rgba(0, 0, 0, 0.399);
+    border: 1.5px solid rgba(0, 0, 0, 0);
+    color: beige;
+}
+
+input:hover, textarea:hover {
+    border: 1.5px solid beige;
+    transition: all .2s ease-in-out;
+
+}
+
+input:focus, textarea:focus {
+    border: 1.5px solid beige;
+    outline: none;
+}
+
+button {
+    background-color: beige;
+    color: rgba(0, 0, 0, 0.856);
+    border-style: none;
+
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(223, 203, 93);
+    transition: all .2s ease-in-out;
+
+}
+
+textarea {
+    resize: none;
+    height: 20vh;
+}
+
+textarea::-webkit-scrollbar {
+    width: 4px;
+}
+
+textarea::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  background: beige;  
+
+}
+
+textarea::-webkit-scrollbar-thumb:active {
+    background-color: rgb(223, 203, 93);
+}
+
+
 hr {
     border: 0;
     height: 3px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.contact-hr {
+    background-color: rgba(255,255,255,.6); 
+    width: 50vw; 
+    margin-bottom: 5px;
 }
 
 footer {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
     align-items: center;
-    padding: 10px 0px;
+    /* padding: 10px 0px; */
     width: 100%;
     font-size: 25px;
     height: 100vh;
@@ -301,20 +385,29 @@ footer {
 .footer-links {
     display: flex;
     flex-direction: row;
-    font-size: 8vw;
+    font-size: 4vw;
     text-align: center;
+
 }
 
-.github-icon, .linkedin-icon, .download-resume-icon, .email-icon {
-    margin-left: 50px;
-}
-
-.fa-linkedin, .fa-github-square, .fa-file, .fa-envelope {
+.fa-linkedin-in, .fa-github, .fa-file-pdf {
     color: beige;
+    margin: 0px 10px;
+    border: solid 1.5px rgba(18, 18, 18, 0);
+    border-radius: 20%;
+    padding: 10px;
+    background-color: rgba(18, 18, 18, 0.242);
+    
 }
 
-.fa-linkedin:hover, .fa-github-square:hover, .fa-file:hover, .fa-envelope:hover {
+.fa-linkedin-in:hover, .fa-github:hover, .fa-file-pdf:hover {
     color: rgb(235, 217, 115);
+    border: solid 1.5px rgba(255,255,255,.6);
+    opacity: 1;
+    transform: scale(1.12);
+    transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+    transition: all .2s ease-in-out;
+
 }
 
 @keyframes fadeInUp {
@@ -368,6 +461,8 @@ footer {
     padding-left: 15px;
     font-size: 3vh;
     padding-right: 15px;
+    transition: all .2s ease-in-out;
+
 }
 .cta-contact:hover {
     background-color: rgb(223, 203, 93, 1); 
@@ -381,16 +476,16 @@ a:link {
     text-decoration: none;
 }
 
-a:hover, .original-zen-garden-link, .james-portfolio-link {
+a:hover, .project-links {
     color: beige;
 }
 
-.original-zen-garden-link, .james-portfolio-link {
+.project-links {
     background-color: rgba(0, 0, 0, 0.199);
     border: 1px solid beige;
 }
 
-.original-zen-garden-link:hover, .james-portfolio-link:hover {
+.project-links:hover {
     color: rgb(223, 203, 93);
 }
 
@@ -441,6 +536,7 @@ $phone: 480px; */
     .about-info {
         font-size: 15px;
     } 
+
 }
 
 @media (max-width: 1112px){
@@ -604,10 +700,6 @@ $phone: 480px; */
         width: 100%; 
         left: 0; 
     }
-
-    
-
-
 }
 
 @media (max-width: 675px) {
@@ -636,14 +728,6 @@ $phone: 480px; */
     }
 }
 
-/* @media (max-width: 670px){
-    /* .about-info {
-        font-size: 13px;
-        margin-left: 9px;
-        margin-right: 9px;
-    } */
-/* } */
-
 /* for scrolling box in about section */
 @media (max-width: 600px){
     ::-webkit-scrollbar {
@@ -666,8 +750,6 @@ $phone: 480px; */
 
 @media only screen and (max-width: 540px) {
     .header-container, #home-container, #about, #projects, #skills, #contact {
-        /* height: 100vh; */
-        /* width: 115%; */
         max-width: 100%;
     }
 
@@ -694,10 +776,4 @@ $phone: 480px; */
         padding-bottom: 15px;
     }
     
-}
-
-@media only screen and (max-width: 415px) {
-    .footer-links {
-        margin-right: 15%;
-    }
 } 
