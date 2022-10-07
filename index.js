@@ -18,6 +18,7 @@ function submitForm(e) {
     //using emailjs to send messages from contact form
     emailjs.send("service_fteuuzv", "template_1o88kv3", params)
     .then(function() {
+        console.log(params.from_name, params.email_id, params.message, "test")
         alert("Email sent successfully!")
         clearForm()
     }, function(error) {

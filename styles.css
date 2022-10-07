@@ -137,10 +137,6 @@ body::-webkit-scrollbar-thumb:active {
     
 }
 
-.about-title {
-    /* padding-bottom: 40px; */
-}
-
 #projects {
     background-image: url("https://images.unsplash.com/photo-1590142035743-0ffa020065e6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjU0fHxsaWdodCUyMGdyZXklMjBuYXR1cmV8ZW58MHwwfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
 }
@@ -317,11 +313,14 @@ input:hover, textarea:hover {
 input:focus, textarea:focus {
     border: 1.5px solid beige;
     outline: none;
+    background-color: beige;
+    color: rgba(0, 0, 0, 0.804);
+
 }
 
 button {
     background-color: beige;
-    color: rgba(0, 0, 0, 0.856);
+    color: rgba(0, 0, 0, 0.937);
     border-style: none;
 
 }
