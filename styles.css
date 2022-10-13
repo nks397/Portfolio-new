@@ -224,6 +224,7 @@ body::-webkit-scrollbar-thumb:active {
     padding-top: 15px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    color: black;
 }
 
 .overlay:hover {
